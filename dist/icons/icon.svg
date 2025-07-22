@@ -1,0 +1,25 @@
+<!-- Simple SVG-based icon for the extension -->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#106ebe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="56" fill="url(#grad1)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Table icon -->
+  <rect x="24" y="32" width="80" height="64" fill="none" stroke="#ffffff" stroke-width="3" rx="4"/>
+  
+  <!-- Table grid lines -->
+  <line x1="24" y1="48" x2="104" y2="48" stroke="#ffffff" stroke-width="2"/>
+  <line x1="24" y1="64" x2="104" y2="64" stroke="#ffffff" stroke-width="2"/>
+  <line x1="24" y1="80" x2="104" y2="80" stroke="#ffffff" stroke-width="2"/>
+  <line x1="48" y1="32" x2="48" y2="96" stroke="#ffffff" stroke-width="2"/>
+  <line x1="80" y1="32" x2="80" y2="96" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Export arrow -->
+  <path d="M 88 36 L 96 44 L 88 52 M 96 44 L 76 44" stroke="#ffffff" stroke-width="2" fill="none"/>
+</svg>

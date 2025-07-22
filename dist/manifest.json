@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "ADX Table Exporter",
+  "version": "1.0.0",
+  "description": "Export Azure Data Explorer tables to markdown format",
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.kusto.windows.net/*",
+    "https://dataexplorer.azure.com/*",
+    "https://*.dataexplorer.azure.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Export ADX Table",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.kusto.windows.net/*",
+        "https://dataexplorer.azure.com/*",
+        "https://*.dataexplorer.azure.com/*"
+      ],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup/*", "content/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
